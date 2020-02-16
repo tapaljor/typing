@@ -64,6 +64,10 @@ quoteInput.addEventListener("input", () => {
         }
     });
     if ( correct) {
+	iLastTime = 0;
+	iTime = 0;
+	iTotal = 0;
+	iKeys = 0;
         nextQuote();
         quoteDisplay.innerText = null;
         quoteInput.value = null;
