@@ -64,19 +64,19 @@ quoteInput.addEventListener("input", () => {
         }
     });
     if ( correct) {
-	iLastTime = 0;
-	iTime = 0;
-	iTotal = 0;
-	iKeys = 0;
+        iLastTime = 0;
+        iTime = 0;
+        iTotal = 0;
+        iKeys = 0;
         nextQuote();
         quoteDisplay.innerText = null;
         quoteInput.value = null;
         wpm.innerText = '--';
         random = new Date().getTime();
-	date = new Date();
-	let time = date.getHours()+':'+date.getMinutes()+':'+date.getSeconds();
-	top20.innerHTML = top20.innerHTML+'<div class="result"><div class="time">'+time+'</div><div class="speed">'+speed+'</div></div>';
-    }
+    	date = new Date();
+	    let time = date.getHours()+':'+date.getMinutes()+':'+date.getSeconds();
+	    top20.innerHTML = '<div class="result"><div class="time">'+time+'</div><div class="speed">'+speed+'</div></div>'+top20.innerHTML;
+	        }
 });
 function getQuote() {
      return fetch(QUOTE_URL)
