@@ -20,6 +20,8 @@ body {
 .top20 {
     flex-basis: 30%;
     color: var(--text2);
+    height: 50vh;
+    overflow: hidden;
 }
 .result {
     display: flex;
