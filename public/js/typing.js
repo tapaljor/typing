@@ -1,4 +1,3 @@
-const QUOTE_URL = "http://api.quotable.io/random";
 function _(el) {
     return document.getElementById(el);
 }
@@ -79,7 +78,7 @@ quoteInput.addEventListener("input", () => {
 	        }
 });
 function getQuote() {
-     return fetch(QUOTE_URL)
+     return fetch("/quote")
     .then (resp => resp.json())
     .then (resp => resp["content"]);
 }
